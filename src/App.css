@@ -47,3 +47,9 @@
 .dropdown-content {
   background-color: rgb(8, 95, 12);
 }
+
+.header {
+  font-weight: bold;
+  font-size: 70px;
+  text-decoration: underline;
+}
