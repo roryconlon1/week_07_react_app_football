@@ -2,13 +2,13 @@ import React from "react";
 
 const LeagueItemDetail = ({league}) => {
 
+
     return(
         <div>
-            <h1>{league.team.name}</h1>
-            <img src={league.team.logos[0].href}></img>
+            <h1>This is a League</h1>
+            <h2>{league.name}</h2>
         </div>
     )
-
 }
 
 export default LeagueItemDetail;

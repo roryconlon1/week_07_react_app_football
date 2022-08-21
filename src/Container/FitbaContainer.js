@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import TeamItemDetail from "../Components/TeamItemDetail";
+import LeagueList from "../Components/LeagueList";
+import TeamSelector from "../Components/TeamSelector";
 import LeagueItemDetail from "../Components/LeagueItemDetail";
-// import LeagueList from "../Components/LeagueList";
-import LeagueSelector from "../Components/LeagueSelector"
 
 
 const FitbaContainer = ({allLeagues}) => {
@@ -26,10 +27,10 @@ const FitbaContainer = ({allLeagues}) => {
     
     return (
         <div className="FitbaContainer">
-            <h2>Container</h2>
-            <LeagueSelector allLeagues={allLeagues} leagues={leagues} onLeagueSelected={onLeagueSelected}/>
-            {selectedLeague ? <LeagueItemDetail url={allLeagues[0].url} league={selectedLeague}/>: null}
-            {/* <LeagueItemDetail league={leagues}/> */}
+            <h1>World Football Teams</h1>
+            <LeagueList allLeagues={allLeagues} league={leagues} onLeagueSelected={onLeagueSelected}/>
+            <TeamSelector allLeagues={allLeagues} leagues={leagues} onLeagueSelected={onLeagueSelected}/>
+            {selectedLeague ? <TeamItemDetail url={allLeagues[0].url} league={selectedLeague}/>: null}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const LeagueSelector = ({leagues, onLeagueSelected}) => {
+const TeamSelector = ({leagues, onLeagueSelected, selectedLeague}) => {
     
     const LeagueOptions = leagues.map((league, index) => {
         return <option value={index} key={index}>{league.team.name}</option>
@@ -13,10 +13,10 @@ const LeagueSelector = ({leagues, onLeagueSelected}) => {
 
     return(
         <select className="dropdown" defaultValue="" onChange={handleChange}>
-        <option value="">Choose a League</option>
+        <option value="">Choose a Team</option>
         {LeagueOptions}
         </select>
     )
 }
 
-export default LeagueSelector;
+export default TeamSelector;
