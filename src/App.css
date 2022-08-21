@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: black;
+  margin: 0%;
 }
 
 .App-logo {
@@ -35,4 +37,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.FitbaContainer {
+  background-color: indigo;
+  color: #61dafb;
+}
+
+.dropdown-content {
+  background-color: rgb(8, 95, 12);
 }
