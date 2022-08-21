@@ -4,18 +4,18 @@ import LeagueItemDetail from "../Components/LeagueItemDetail";
 import LeagueSelector from "../Components/LeagueSelector"
 
 
-const FitbaContainer = () => {
+const FitbaContainer = ({allLeagues}) => {
 
     const [leagues, setLeagues] = useState([]);
     const [selectedLeague, setSelectedLeague] = useState(null);
 
     useEffect(() => {
-        getLeagues();
-    }, [])
+        getLeagues(allLeagues[0].url);
+    }, [allLeagues])
 
     
-    const getLeagues = () => {
-        fetch("https://api-football-standings.azharimm.site/leagues/eng.1/standings?").
+    const getLeagues = url => {
+        fetch(url).
         then(res => res.json()).
         then(leagues => setLeagues(leagues.data.standings));
     }
@@ -27,8 +27,8 @@ const FitbaContainer = () => {
     return (
         <div className="FitbaContainer">
             <h2>Container</h2>
-            <LeagueSelector leagues={leagues} onLeagueSelected={onLeagueSelected}/>
-            {selectedLeague ? <LeagueItemDetail league={selectedLeague}/>: null}
+            <LeagueSelector allLeagues={allLeagues} leagues={leagues} onLeagueSelected={onLeagueSelected}/>
+            {selectedLeague ? <LeagueItemDetail url={allLeagues[0].url} league={selectedLeague}/>: null}
             {/* <LeagueItemDetail league={leagues}/> */}
         </div>
     )
