@@ -4,7 +4,6 @@ import FitbaContainer from "./Container/FitbaContainer"
 function App() {
 
   const allLeagues = [
-    {name: "English Premier League", url:"https://api-football-standings.azharimm.site/leagues/eng.1/standings?"},
     {name: "Argentine Liga Profesional de Fútbol", url:"https://api-football-standings.azharimm.site/leagues/arg.1/standings?"},
     {name: "Australian A-League Men", url:"https://api-football-standings.azharimm.site/leagues/aus.1/standings?"},
     {name: "Brazilian Serie A", url:"https://api-football-standings.azharimm.site/leagues/bra.1/standings?"},
@@ -12,8 +11,9 @@ function App() {
     {name: "Dutch Eredivisie", url:"https://api-football-standings.azharimm.site/leagues/ned.1/standings?"},
     {name: "French Ligue 1", url:"https://api-football-standings.azharimm.site/leagues/fra.1/standings?"},
     {name: "German Bundesliga", url:"https://api-football-standings.azharimm.site/leagues/ger.1/standings?"},
-    {name: "Indonesian Liga 1", url:"https://api-football-standings.azharimm.site/leagues/idn.1/standings?"},
+    {name: "English Premier League", url:"https://api-football-standings.azharimm.site/leagues/eng.1/standings?"},
     {name: "Italian Serie A", url: "https://api-football-standings.azharimm.site/leagues/ita.1/standings?"},
+    {name: "Indonesian Liga 1", url:"https://api-football-standings.azharimm.site/leagues/idn.1/standings?"},
     {name: "Japanese J League", url: "https://api-football-standings.azharimm.site/leagues/jpn.1/standings?"},
     {name: "Malaysian Super League", url: "https://api-football-standings.azharimm.site/leagues/mys.1/standings?"},
     {name: "Mexican Liga BBVA MX", url: "https://api-football-standings.azharimm.site/leagues/mex.1/standings?"},

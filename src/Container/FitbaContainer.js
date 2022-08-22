@@ -12,7 +12,7 @@ const FitbaContainer = ({allLeagues}) => {
 
     useEffect(() => {
         getLeagues(allLeagues[0].url);
-    }, [allLeagues])
+    }, [])
 
     
     const getLeagues = url => {
@@ -30,9 +30,12 @@ const FitbaContainer = ({allLeagues}) => {
             <h1 className="header">World Football Teams</h1>
             <hr></hr>
             <LeagueList allLeagues={allLeagues} league={leagues} onLeagueSelected={onLeagueSelected}/>
+            {/* {selectedLeague ? <LeagueItemDetail league={leagues}/>: null} */}
             <TeamSelector allLeagues={allLeagues} leagues={leagues} onLeagueSelected={onLeagueSelected}/>
             <hr></hr>
             {selectedLeague ? <TeamItemDetail url={allLeagues[0].url} league={selectedLeague}/>: null}
+
+
         </div>
     )
 }
